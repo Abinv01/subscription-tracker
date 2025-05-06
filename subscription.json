@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Netflix",
+    "next_due_date": "2025-05-10",
+    "cycle": "monthly"
+  },
+  {
+    "name": "Amazon Prime",
+    "next_due_date": "2025-05-21",
+    "cycle": "monthly"
+  },
+  {
+    "name": "Uber One-mobile registered",
+    "next_due_date": "2025-05-25",
+    "cycle": "monthly"
+  },
+
+  {
+    "name": "Uber One-bengrey016",
+    "next_due_date": "2025-06-05",
+    "cycle": "monthly"
+  },
+
+  {
+    "name": "Microsoft 365-bengrey016",
+    "next_due_date": "2025-06-02",
+    "cycle": "annually"
+  }
+]
