@@ -2,18 +2,18 @@
 
 A simple Python script to track your upcoming subscription renewals and alert you before they are due. Perfect for avoiding surprise charges.
 
-## Features
+# Features
 - Read subscriptions from a local `subscription.json` file.
 - Automatically checks for due subscriptions every 6 hours.
 - Designed to run in the background using `nohup`.
 - No external files or database required.
 
-##  Requirements
+# Requirements
 - Python 3.8+
 - A virtual environment (recommended)
 - `subscription.json` file in the project root.
 
-##  Example `subscription.json`
+#  Example `subscription.json`
 
 ```json
 [
@@ -27,23 +27,23 @@ A simple Python script to track your upcoming subscription renewals and alert yo
   }
 ]
 
-Run the script
+# Run the script
 For one-time run:
 python3 subscription_tracker.py
-For background (persistent) run:
+# For background (persistent) run:
 nohup python3 subscription_tracker.py &
 tail -f nohup.out
 
- Output
+# Output
 Alerts for upcoming subscriptions due within 3 days.
 
 Logs saved in nohup.out when run with nohup.
 
- Tips
+# Tips
 Use ps aux | grep subscription_tracker.py to check if it’s running.
 
 Use kill <PID> to stop it if needed.
 
 
-Author
+# Author
 Abhinav Choudhary
