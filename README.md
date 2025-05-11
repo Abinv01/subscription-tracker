@@ -13,9 +13,10 @@ A simple Python script to track your upcoming subscription renewals and alert yo
 - A virtual environment (recommended)
 - `subscription.json` file in the project root.
 
-#  Example `subscription.json`
-
-```json
+#  Example Subscriptions
+json
+Copy
+Edit
 [
   {
     "name": "Spotify",
@@ -27,12 +28,17 @@ A simple Python script to track your upcoming subscription renewals and alert yo
   }
 ]
 
-# Run the script
-For one-time run:
+# Run the Script
+For One-Time Run:
+
 python3 subscription_tracker.py
-# For background (persistent) run:
+
+
+# For Background (Persistent) Run:
+
 nohup python3 subscription_tracker.py &
 tail -f nohup.out
+
 
 # Output
 Alerts for upcoming subscriptions due within 3 days.
@@ -44,6 +50,6 @@ Use ps aux | grep subscription_tracker.py to check if it’s running.
 
 Use kill <PID> to stop it if needed.
 
-
 # Author
 Abhinav Choudhary
+
