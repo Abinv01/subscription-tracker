@@ -1,18 +1,49 @@
-# Subscription Tracker
+#  Subscription Tracker AI
 
-This is a simple Python project that helps you keep track of your subscription due dates (e.g., Netflix, Amazon Prime, Uber One) and sends email alerts when a subscription is about to renew.
+A simple Python script to track your upcoming subscription renewals and alert you before they are due. Perfect for avoiding surprise charges.
 
-## Features:
-- Track multiple subscriptions with different billing cycles (monthly, yearly)
-- Automatically calculates and sends email reminders for upcoming due dates
-- Keeps email credentials secure using `.env` and `python-dotenv`
-  
----
+## Features
+- Read subscriptions from a local `subscription.json` file.
+- Automatically checks for due subscriptions every 6 hours.
+- Designed to run in the background using `nohup`.
+- No external files or database required.
 
-## 📦 Requirements
+##  Requirements
+- Python 3.8+
+- A virtual environment (recommended)
+- `subscription.json` file in the project root.
 
-- Python 3.7+ (recommended)
-- Install required Python libraries:
+##  Example `subscription.json`
 
-```bash
-pip install -r requirements.txt
+```json
+[
+  {
+    "name": "Spotify",
+    "renewal_date": "2025-05-15"
+  },
+  {
+    "name": "Netflix",
+    "renewal_date": "2025-05-12"
+  }
+]
+
+Run the script
+For one-time run:
+python3 subscription_tracker.py
+For background (persistent) run:
+nohup python3 subscription_tracker.py &
+tail -f nohup.out
+
+ Output
+Alerts for upcoming subscriptions due within 3 days.
+
+Logs saved in nohup.out when run with nohup.
+
+ Tips
+Use ps aux | grep subscription_tracker.py to check if it’s running.
+
+Use kill <PID> to stop it if needed.
+
+
+Author
+Abhinav Choudhary
